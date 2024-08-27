@@ -34,8 +34,11 @@ Repositorio para actividades/ AD24
 4.Validar opción seleccionada.
 
  4.1-Si moneda = "Libras esterlinas", definir la tasa de conversión (ejemplo: 1 peso = 0.041 libras).
+ 
  4.2-Si moneda = "Euros", definir la tasa de conversión (ejemplo: 1 peso = 0.050 euros).
+ 
  4.3-Si moneda = "Dólares", definir la tasa de conversión (ejemplo: 1 peso = 0.055 dólares).
+ 
 5-Realizar la conversión:
 
  5.1-Cantidad convertida = Cantidad en pesos × Tasa de conversión.
