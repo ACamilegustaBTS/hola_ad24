@@ -43,9 +43,9 @@ Repositorio para actividades/ AD24
 
  5.1-Cantidad convertida = Cantidad en pesos × Tasa de conversión.
  
-6-Imprimir el resultado de la conversión en la moneda seleccionada.
+6.Imprimir el resultado de la conversión en la moneda seleccionada.
 
-7-Fin.
+7.Fin.
 
 **Salida esperada** 
 
