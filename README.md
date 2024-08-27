@@ -10,9 +10,9 @@ Repositorio para actividades/ AD24
 **Algoritmo pensado**
 **Entradas:**
 
--Cantidad en pesos: valor numérico
+-Cantidad en pesos: valor numérico -float-
 
--Moneda destino: opción (Libras, Euros, Dólares)
+-Moneda destino: opción (Libras, Euros, Dólares) -string-
 
 
  **Salidas:**
