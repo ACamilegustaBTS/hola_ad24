@@ -1,23 +1,32 @@
 # Tasas de conversión
-tasa_libras = 0.041
-tasa_euros = 0.050
-tasa_dolares = 0.055
+TASA_LIBRAS = 0.041
+TASA_EUROS = 0.050
+TASA_DOLARES = 0.055
 
-# Entrada de usuario
-pesos = float(input("Ingresa la cantidad en pesos mexicanos: "))
-opcion = input("Selecciona la moneda (libras, euros, dolares): ").lower()
+def convertir_moneda(pesos, tasa):
+    return pesos * tasa
 
-# Conversión
-if opcion == "libras":
-    convertido = pesos * tasa_libras
-elif opcion == "euros":
-    convertido = pesos * tasa_euros
-elif opcion == "dolares":
-    convertido = pesos * tasa_dolares
+def solicitar_datos():
+    pesos = float(input("Ingresa la cantidad en pesos mexicanos: "))
+    opcion = input("Selecciona la moneda (libras, euros, dolares): ").lower()
+    return pesos, opcion
+
+def obtener_tasa(opcion):
+    if opcion == "libras":
+        return TASA_LIBRAS
+    elif opcion == "euros":
+        return TASA_EUROS
+    elif opcion == "dolares":
+        return TASA_DOLARES
+    else:
+        return None
+
+pesos, opcion = solicitar_datos()
+tasa = obtener_tasa(opcion)
+
+if tasa is not None:
+    convertido = convertir_moneda(pesos, tasa)
+    print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
 else:
-    convertido = None
     print("Opción no válida.")
 
-# Salida
-if convertido is not None:
-    print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
