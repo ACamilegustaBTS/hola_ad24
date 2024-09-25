@@ -21,13 +21,17 @@ def obtener_tasa(opcion):
     else:
         return None
 
-# Ejecución del programa
-pesos, opcion = solicitar_datos()
-tasa = obtener_tasa(opcion)
+while True:
+    pesos, opcion = solicitar_datos()
+    tasa = obtener_tasa(opcion)
 
-if tasa is not None:
-    convertido = convertir_moneda(pesos, tasa)
-    print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
-else:
-    print("Opción no válida.")
-
+    if tasa is not None:
+        convertido = convertir_moneda(pesos, tasa)
+        print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
+    else:
+        print("Opción no válida.")
+    
+    continuar = input("¿Deseas realizar otra conversión? (si/no): ").lower()
+    if continuar != "si":
+        break
+print("fin")
