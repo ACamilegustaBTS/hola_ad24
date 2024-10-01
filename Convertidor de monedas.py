@@ -7,9 +7,21 @@ def convertir_moneda(pesos, tasa):
     return pesos * tasa
 
 def solicitar_datos():
-    pesos = float(input("Ingresa la cantidad en pesos mexicanos: "))
-    opcion = input("Selecciona la moneda (libras, euros, dolares): ").lower()
-    return pesos, opcion
+    lista_pesos = []
+    lista_opcion = []
+    
+    while True:
+        pesos = float(input("Ingresa la cantidad en pesos mexicanos: "))
+        opcion = input("Selecciona la moneda (libras, euros, dolares): ").lower()
+        
+        lista_pesos.append(pesos)
+        lista_opcion.append(opcion)
+        
+        continuar = input("¿Deseas agregar otra conversión? (si/no): ").lower()
+        if continuar != "si":
+            break
+    
+    return lista_pesos, lista_opcion
 
 def obtener_tasa(opcion):
     if opcion == "libras":
@@ -21,17 +33,16 @@ def obtener_tasa(opcion):
     else:
         return None
 
-while True:
-    pesos, opcion = solicitar_datos()
-    tasa = obtener_tasa(opcion)
+lista_pesos, lista_opcion = solicitar_datos()
 
+for i in range(len(lista_pesos)):
+    pesos = lista_pesos[i]
+    opcion = lista_opcion[i]
+    tasa = obtener_tasa(opcion)
     if tasa is not None:
         convertido = convertir_moneda(pesos, tasa)
         print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
     else:
         print("Opción no válida.")
-    
-    continuar = input("¿Deseas realizar otra conversión? (si/no): ").lower()
-    if continuar != "si":
-        break
-print("fin")
+
+print("Fin")
