@@ -1,7 +1,10 @@
-# Tasas de conversión
-TASA_LIBRAS = 0.041
-TASA_EUROS = 0.050
-TASA_DOLARES = 0.055
+def obtener_tasa(matriz, moneda):
+    # Encuentra el índice de la moneda en la primera fila
+    if moneda in matriz[0]:
+        indice = matriz[0].index(moneda)
+        return matriz[1][indice]
+    else:
+        return None
 
 def convertir_moneda(pesos, tasa):
     return pesos * tasa
@@ -20,29 +23,23 @@ def solicitar_datos():
         continuar = input("¿Deseas agregar otra conversión? (si/no): ").lower()
         if continuar != "si":
             break
-    
     return lista_pesos, lista_opcion
 
-def obtener_tasa(opcion):
-    if opcion == "libras":
-        return TASA_LIBRAS
-    elif opcion == "euros":
-        return TASA_EUROS
-    elif opcion == "dolares":
-        return TASA_DOLARES
-    else:
-        return None
+matriz_conversion = [
+    ["libras", "euros", "dolares"],
+    [0.041, 0.050, 0.055]
+]
 
 lista_pesos, lista_opcion = solicitar_datos()
 
 for i in range(len(lista_pesos)):
     pesos = lista_pesos[i]
     opcion = lista_opcion[i]
-    tasa = obtener_tasa(opcion)
+    tasa = obtener_tasa(matriz_conversion, opcion)
     if tasa is not None:
         convertido = convertir_moneda(pesos, tasa)
         print(f"{pesos} pesos mexicanos equivalen a {convertido:.2f} {opcion}.")
     else:
-        print("Opción no válida.")
+        print(f"Opción no válida en la posición {i+1}.")
 
 print("Fin")
