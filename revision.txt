@@ -1,0 +1,19 @@
+Avance 1: 
+"Bien tu propuesta. Sin embargo es un poco simple y puede costarte incluir algunos de los puntos que requieres para completar tu proyecto, si quieres agregarle un poco de dificultad te recomiento evaluar como entregas el cambio de pesos a X moneda, puede ser que tambien calcule la forma más eficiente de dar cambio, es decir, X de 10, X de 5, X de 2, etc... Consideralo para tus futuras entregas. A tu return o salida tambien incluye el tipo de dato que se retorna.
+Si quieres revision de esta compentencia, anexa un txt. llamado revision.txt donde me digas todo lo que quieras que vuelva a evaluar o no se dara retroalimentacion hasta la entrega final."
+Para mi proyecto realicé un convertidor de monedas, al principio mi proyecto fue algo pequeño pero al continuar con los demás avances cumple con todo lo que se me pide, obtuve una alificación de 0 y me gustría que se volviera a calificar
+
+Avance 2:
+"No hubo entrega.
+Si quieres revision de esta compentencia, anexa un txt. llamado revision.txt donde me digas todo lo que quieras que vuelva a evaluar o no se dara retroalimentacion hasta la entrega final."
+Me gustaría que se me evaluara este avance de nuevo.
+
+Avance 3:
+"Haces buena divison de las funciones, sin embargo no las estas mandando a llamar ni haciendo nada con ellas.
+Adicionalmente, en tu repo solo trata de tener un archivo sobre el cual trabajes, no entregues uno nuevo con cada entrega, ya que solo se te evaluara uno, tambien no olvides las extensiones de tu archivo tu archivo de avance 3 no tiene extension .py por lo cual no es ejecutable."
+El avance 3 lo entregué en tiempo y forma, hice lo que se me solicitaba y mis funciones si se llaman y son de importancia dentro de mi código, por lo que no entiendo la retroalimentción. El archivo se entregó en extensión .py
+
+Avance 6:
+" No presento entrega."
+Hubo entrega desde canvas y de igual forma me aparece esta subcomptencia en 0.
+
